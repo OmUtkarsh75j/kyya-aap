@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #eafaf1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #2d6a4f;
+            font-weight: 600;
+            animation: fadeIn 2s ease-in-out;
+        }
+        #birthdayMessage {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #a5d6a7;
+            border-radius: 10px;
+            color: #444;
+            animation: slideIn 1.5s ease-in-out;
+        }   
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .audio-control {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .msg1-control {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 10s ease-in-out;
+        }
+
+        /* Common button style */
+        button {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button 1 (Green) */
+        #playAudio {
+            background-color: #59c9aa;
+        }
+        #playAudio:hover {
+            background-color: #45a089;
+        }
+
+        /* Button 2 (Purple) */
+        #playAudio2 {
+            background-color: #ff6f91;  
+        }
+        #playAudio2:hover {
+            background-color: #e85a7c;
+        }
+
+        /* Button 3 (Celebration) */
+        #Celebration {
+            background-color: #cc9df5;  
+        }
+        #Celebration:hover {
+            background-color: #aa6aa9;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }   
+        @keyframes slideIn {
+            from { transform: translateY(-50%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0.5; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>KYYA AAP BILLU BADMOSH HAINN ??? 🐈 🎉</h1>
+        <!--<div id="birthdayMessage">
+            <p>🎉 "Happy Birthday Billu Badmosh! 🎂 May your smile keep shining bigger than the stars 🌟🌟 ✨"</p>
+            <p>🎈 Have a fantastic day, Billu Badmosh 🥳!</p>
+        </div>
+        <div class="br1">
+            <img src="Img/Billu.jpg" alt="Image not found">
+        </div>-->
+        <div class="audio-control">
+            <!-- First Audio -->
+            <button id="playAudio">🎵 HAAN 😼</button>
+            <audio id="birthdaySong" src="folder/GANGAN.mpeg" controls style="display: none;"></audio>
+
+            <!-- Second Audio -->
+            <button id="playAudio2">🎵 NOIII 👊</button>
+            <audio id="birthdaySong2" src="folder/German cat.mpeg" controls style="display: none;"></audio>
+        </div>
+        <div class="msg1-control">
+            <button id="Celebration"> NEXT PAGE ➡ </button>
+        </div>
+    </div>
+
+    <script>
+        // Celebration button (redirect)
+        document.getElementById("Celebration").addEventListener("click", function() {
+            window.location.href = "https://omutkarsh75j.github.io/billubadmosh/"; // Replace with your URL
+        });
+
+        // Play song 1
+        document.getElementById('playAudio').addEventListener('click', () => {
+            const birthdaySong = document.getElementById('birthdaySong');
+            birthdaySong.play();
+        });
+
+        // Play song 2
+        document.getElementById('playAudio2').addEventListener('click', () => {
+            const birthdaySong2 = document.getElementById('birthdaySong2');
+            birthdaySong2.play();
+        });
+    </script>
+</body>
+</html>
